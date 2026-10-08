@@ -14,7 +14,7 @@ h1,h2,h3,p{margin-top:0}
 .intro-copy h1{font-size:clamp(3.7rem,5.5vw,6.9rem);line-height:.95;letter-spacing:-.053em;color:#142640;margin:0 0 26px}
 .intro-copy h1 em,h2 em{color:#b58a47;font-weight:500}
 .intro-copy .lead{font-size:clamp(15px,1.25vw,18px);color:#223752;line-height:1.65;max-width:660px;margin-bottom:17px}
-.intro-copy>p:not(.eyebrow):not(.lead){font-size:14px;color:var(--muted);line-height:1.8;max-width:640px;margin-bottom:20px}
+.intro-copy>p:not(.eyebrow):not(.lead):not(.section-kicker){font-size:14px;color:var(--muted);line-height:1.8;max-width:640px;margin-bottom:20px}
 .intro-copy strong,.music-content strong{font-weight:700;color:#1b344e}
 .inline-link{display:inline-flex;gap:23px;align-items:center;color:#90662d;font-size:12px;font-weight:700;padding-bottom:9px;border-bottom:1px solid #b99254;transition:gap .22s,color .22s}
 .inline-link:hover{gap:32px;color:#67451f}
@@ -46,7 +46,7 @@ h1,h2,h3,p{margin-top:0}
 .invitation .eyebrow{color:#e1b66e}
 .invitation h2{font-size:clamp(2.4rem,3.7vw,4.6rem);line-height:1.03;letter-spacing:-.035em;margin:0 0 11px;color:#fff}
 .invitation h2 em{color:#e6bc73}
-.invitation p:not(.eyebrow){font-size:13px;line-height:1.7;color:#cbd4df;margin:0}
+.invitation p:not(.eyebrow):not(.section-kicker){font-size:13px;line-height:1.7;color:#cbd4df;margin:0}
 .invitation-button{flex:none;display:inline-flex;align-items:center;gap:23px;background:linear-gradient(110deg,#e9c276,#cfa05a);padding:16px 19px;color:#172943;font-size:12px;font-weight:700;border-radius:5px;transition:transform .2s}
 .invitation-button:hover{transform:translateY(-3px)}
 .footer{padding:27px clamp(24px,6vw,100px);display:flex;align-items:center;justify-content:space-between;background:#0c1d34;color:#bdc8d7;font-size:11px}
@@ -101,3 +101,37 @@ h1,h2,h3,p{margin-top:0}
 .invitation p.section-kicker.section-kicker-dark{padding:10px 15px;border-left:4px solid #d0a451}
 .aside-values>div{grid-template-columns:minmax(0,1fr);gap:5px}
 .gathering-head{justify-content:flex-start}
+
+/* Libellés uniformes — correction du conflit avec les styles de paragraphes */
+.section-kicker,
+.intro-copy>p.section-kicker,
+.invitation p.section-kicker.section-kicker-dark {
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-start;
+  width:min(100%,245px);
+  min-height:42px;
+  margin:0 0 19px;
+  padding:9px 14px;
+  font-family:"DM Sans",sans-serif;
+  font-size:11px;
+  font-weight:800;
+  line-height:1.35;
+  letter-spacing:.055em;
+  color:#142944;
+  background:#eaf0f5;
+  border:1px solid #c7d7e5;
+  border-left:4px solid #142944;
+  border-radius:4px;
+  opacity:1;
+}
+.section-kicker span {display:inline;}
+@media(max-width:480px){
+  .section-kicker,
+  .intro-copy>p.section-kicker,
+  .invitation p.section-kicker.section-kicker-dark {
+    width:min(100%,245px);
+    min-height:42px;
+    font-size:11px;
+  }
+}

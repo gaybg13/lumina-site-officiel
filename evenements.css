@@ -39,3 +39,10 @@ a:focus-visible{outline:3px solid #c29a54;outline-offset:4px}
 @media(max-width:760px){.events-intro,.events-heading,.events-cards{grid-template-columns:1fr}.events-intro{padding:40px 6% 0;gap:0}.events-copy{padding-bottom:30px}.events-copy h1{font-size:clamp(3.8rem,11.3vw,6rem)}.events-photo{min-height:370px;max-width:510px;width:100%;margin:auto}.events-photo img{max-height:370px}.events-plan{padding:51px 6%}.events-heading{gap:15px}.events-cards{gap:14px}.event-card{min-height:220px}.newsbar{align-items:flex-start;flex-direction:column;gap:11px;margin-top:27px}.events-invite{flex-direction:column;align-items:stretch;padding:43px 6%}.invite-button{align-self:flex-start}.footer{padding:25px 6%;flex-direction:column;align-items:flex-start}}
 @media(max-width:390px){.events-photo{min-height:330px}.events-photo img{max-height:330px}.events-copy h1{font-size:clamp(3.35rem,11vw,4.5rem)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Photos détourées sur matière claire : contraste optimal des vêtements sombres */
+.events-photo{background:radial-gradient(ellipse at 50% 33%,#fffdfa 0%,#f1e4cf 58%,#d9c19d 100%);border-color:#d8bb8c}
+.events-photo::before{border-color:rgba(49,63,86,.22)}
+.events-photo::after{background:rgba(180,131,60,.15)}
+.events-photo img{width:min(100%,350px);max-height:390px}
+.photo-label{color:#6f522c}

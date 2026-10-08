@@ -83,3 +83,11 @@ h1 em,h2 em{font-weight:500;color:#b88b42}
 @media(max-width:1100px){.intro{grid-template-columns:minmax(0,1fr) minmax(270px,.75fr);gap:25px}.intro-content h1{font-size:clamp(3.8rem,6vw,6.5rem)}.intro-visual{min-height:430px}.intro-visual img{max-height:420px}}
 @media(max-width:760px){.intro{grid-template-columns:1fr;gap:0;padding:36px 6% 0;min-height:0}.intro-content{padding-bottom:30px}.intro-content h1{font-size:clamp(3.75rem,11vw,5.8rem)}.intro-visual{min-height:355px;max-width:510px;width:100%;margin-inline:auto;border-radius:160px 160px 0 0}.intro-visual img{max-height:360px}.image-eyebrow{top:22px;left:24px}.photo-caption{bottom:13px}.offers{padding-top:50px}}
 @media(max-width:390px){.intro-visual{min-height:320px}.intro-visual img{max-height:322px}.intro-content .intro-side>p{font-size:13px}}
+
+/* Fond ivoire-doré : le vêtement noir des musiciens reste parfaitement détaché */
+.intro-visual{background:radial-gradient(ellipse at 55% 37%,#fffdf4 0%,#f4e7d2 52%,#ddc7a5 100%);border-color:#d5bb91}
+.intro-visual::before{border-color:rgba(50,62,76,.22)}
+.intro-visual::after{background:rgba(184,136,64,.15)}
+.image-eyebrow{color:#73552e}
+.intro-visual img{width:min(100%,405px);max-height:440px}
+.photo-caption{background:rgba(18,39,67,.95);border-color:#caa56b}

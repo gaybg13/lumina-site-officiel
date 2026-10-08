@@ -91,3 +91,50 @@ h1 em,h2 em{font-weight:500;color:#b88b42}
 .image-eyebrow{color:#73552e}
 .intro-visual img{width:min(100%,405px);max-height:440px}
 .photo-caption{background:rgba(18,39,67,.95);border-color:#caa56b}
+
+/* Composition éditoriale épurée — le bassiste est détouré, sans panneau coloré */
+.intro{
+  background:#fffdfa;
+  grid-template-columns:minmax(0,1fr) minmax(300px,.68fr);
+  gap:clamp(22px,3vw,65px);
+  padding-block:clamp(42px,5vw,74px);
+  min-height:0;
+  align-items:center;
+  overflow:visible;
+}
+.intro-content{padding-bottom:0}
+.intro-visual{
+  align-self:center;
+  min-height:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:none;
+  border:0;
+  border-radius:0;
+  overflow:visible;
+  isolation:auto;
+  padding:10px 0;
+}
+.intro-visual::before,.intro-visual::after{content:none;display:none}
+.intro-visual img{
+  position:relative;
+  width:min(100%,350px);
+  max-width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  filter:drop-shadow(0 14px 15px rgba(19,38,62,.14));
+  image-rendering:auto;
+}
+@media(max-width:1100px){
+ .intro{grid-template-columns:minmax(0,1fr) minmax(255px,.65fr)}
+ .intro-visual{min-height:0;border-radius:0}
+ .intro-visual img{max-height:none;width:min(100%,320px)}
+}
+@media(max-width:760px){
+ .intro{grid-template-columns:1fr;padding:37px 6% 34px;gap:10px}
+ .intro-visual{max-width:420px;min-height:0;width:100%;margin:auto;padding-top:5px}
+ .intro-visual img{max-height:none;width:min(78%,330px)}
+ .intro-content{padding-bottom:12px}
+}

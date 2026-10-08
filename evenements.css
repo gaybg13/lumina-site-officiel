@@ -46,3 +46,19 @@ a:focus-visible{outline:3px solid #c29a54;outline-offset:4px}
 .events-photo::after{background:rgba(180,131,60,.15)}
 .events-photo img{width:min(100%,350px);max-height:390px}
 .photo-label{color:#6f522c}
+
+/* Page Événements sans portrait : composition éditoriale compacte et centrée */
+.events-intro{
+  display:block;
+  min-height:0;
+  padding:clamp(46px,5.5vw,82px) clamp(24px,6vw,100px) clamp(48px,5vw,78px);
+  background:linear-gradient(116deg,#fffefa,#f9f2e7);
+}
+.events-copy{max-width:920px;padding:0}
+.events-copy h1{font-size:clamp(4.1rem,6.8vw,8.1rem)}
+.events-lead{max-width:780px}
+.events-copy>p:not(.section-kicker):not(.events-lead){max-width:730px}
+@media(max-width:760px){
+  .events-intro{padding:40px 6% 49px}
+  .events-copy{padding:0}
+}

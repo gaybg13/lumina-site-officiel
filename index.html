@@ -3,106 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fffaf3">
-  <meta name="description" content="Découvrez le Chœur Lumina à Lille : un répertoire pluriel, des animations de messes et des prestations pour mariages, concerts et événements.">
-  <title>Chœur Lumina — Des voix, mille horizons</title>
+  <meta name="theme-color" content="#fffdf9">
+  <meta name="description" content="Chœur Lumina, ensemble vocal à Lille et dans les Hauts-de-France. Prestations musicales pour mariages, cérémonies, concerts et événements.">
+  <title>Chœur Lumina | Des voix. Une émotion.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="https://raw.githubusercontent.com/gaybg13/Choeur-Lumina-APP-WEB/main/public/icons/icon-512.png">
-  <link rel="stylesheet" href="/premium.css?v=20261008-06">
+  <link rel="preload" as="image" href="https://raw.githubusercontent.com/gaybg13/Choeur-Lumina-APP-WEB/main/public/choeur-lumina-groupe-hero.jpg">
+  <link rel="stylesheet" href="/premium.css?v=20261008-05">
 </head>
 <body>
-  <header class="header">
-    <a class="brand" href="/" aria-label="Chœur Lumina — Accueil">
-      <img src="https://raw.githubusercontent.com/gaybg13/Choeur-Lumina-APP-WEB/main/public/icons/icon-512.png" alt="Chœur Lumina" width="115" height="115">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Chœur Lumina, accueil">
+      <span class="brand-art"><img src="https://raw.githubusercontent.com/gaybg13/Choeur-Lumina-APP-WEB/main/public/icons/icon-512.png" alt="Logo officiel du Chœur Lumina" width="104" height="104"></span>
+      <span class="brand-name"><span>Chœur</span><strong>LUMINA</strong><i aria-hidden="true"></i></span>
     </a>
-    <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Ouvrir le menu">
-      <span aria-hidden="true">☰</span>
-    </button>
-    <nav id="main-navigation" class="navigation" aria-label="Menu principal">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Afficher le menu"><span aria-hidden="true">☰</span></button>
+    <nav id="site-menu" class="site-menu" aria-label="Navigation principale">
       <a href="/choeur/">Le chœur</a>
       <a href="/prestations/">Prestations</a>
       <a href="/evenements/">Événements</a>
       <a href="/partenaires/">Partenaires</a>
-      <a class="nav-cta" href="/contact/">Nous contacter <span aria-hidden="true">↗</span></a>
+      <a href="/contact/" class="contact-link">Nous contacter <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-text">
-        <p class="overline"><span class="small-rule" aria-hidden="true"></span> ENSEMBLE VOCAL · LILLE ET MÉTROPOLE</p>
-        <h1 id="hero-title">Des voix.<br><em>Mille horizons.</em></h1>
-        <p class="opening-line">La musique nous rassemble. Notre répertoire nous ouvre au monde.</p>
-        <p class="lead">Du gospel aux chants liturgiques, nous cultivons une diversité de styles et le plaisir de chanter ensemble. Cette ouverture nous permet d'accompagner bien plus que des célébrations religieuses : concerts, mariages et événements culturels ou privés.</p>
+
+  <main class="homepage">
+    <section class="hero" aria-labelledby="welcome-title">
+      <div class="hero-copy">
+        <div class="kicker"><span class="kicker-line" aria-hidden="true"></span> ENSEMBLE VOCAL · LILLE & HAUTS-DE-FRANCE</div>
+        <h1 id="welcome-title">Des voix.<br><em>Une émotion.</em></h1>
+        <div class="ornament" aria-hidden="true"><span></span>✧<span></span></div>
+        <p>Des harmonies qui rassemblent, des instants qui marquent. Découvrez un chœur animé par la passion de chanter et de partager.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="/prestations/">Découvrir nos prestations <span aria-hidden="true">↗</span></a>
-          <a class="button button-secondary" href="/contact/">Parlons de votre événement <span aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href="/choeur/">Découvrir le chœur <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <div class="visual" aria-hidden="true">
-        <div class="visual-glow"></div>
-        <div class="ring ring-outer"></div>
-        <div class="ring ring-middle"></div>
-        <div class="ring ring-inner"></div>
-        <div class="note note-one">♪</div>
-        <div class="note note-two">♫</div>
-        <div class="star star-one">✧</div>
-        <div class="star star-two">✦</div>
-        <div class="visual-center">
-          <span class="visual-topline">L'ESPRIT LUMINA</span>
-          <span class="visual-title">Une musique<br><em>plurielle.</em></span>
-          <span class="visual-subtitle">Une même passion, des univers à découvrir.</span>
-          <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-        </div>
-        <div class="floating-label label-one">GOSPEL</div>
-        <div class="floating-label label-two">CHANTS LITURGIQUES</div>
-        <div class="floating-label label-three">AUTRES UNIVERS</div>
+      <div class="hero-visual">
+        <div class="halo halo-one" aria-hidden="true"></div>
+        <div class="halo halo-two" aria-hidden="true"></div>
+        <div class="photo-outline" aria-hidden="true"></div>
+        <figure class="photo-frame">
+          <img src="https://raw.githubusercontent.com/gaybg13/Choeur-Lumina-APP-WEB/main/public/choeur-lumina-groupe-hero.jpg" alt="Les membres du Chœur Lumina réunis pour une photographie de groupe" fetchpriority="high" decoding="async">
+        </figure>
+        <div class="visual-caption"><span class="spark" aria-hidden="true">✦</span><span>DES VOIX<br>QUI RASSEMBLENT</span></div>
       </div>
+      <span class="hero-flourish" aria-hidden="true">✧</span>
     </section>
-    <section class="rhythm" aria-labelledby="rhythm-title">
-      <div class="rhythm-heading">
-        <p class="overline">NOTRE VIE MUSICALE</p>
-        <h2 id="rhythm-title">Ancrés dans nos églises.<br><em>Ouverts à tous les horizons.</em></h2>
-      </div>
-      <div class="rhythm-cards">
-        <article class="rhythm-card">
-          <span class="card-number">01</span>
-          <span class="card-frequency">TOUS LES DEUX MOIS</span>
-          <h3>Saint-Vincent-de-Paul</h3>
-          <p>Nous nous retrouvons à l'église Saint-Vincent-de-Paul pour animer une messe.</p>
-        </article>
-        <article class="rhythm-card">
-          <span class="card-number">02</span>
-          <span class="card-frequency">UNE FOIS PAR MOIS</span>
-          <h3>Dans la métropole lilloise</h3>
-          <p>Nous animons également des messes dans d'autres églises de la métropole.</p>
-        </article>
-        <article class="rhythm-card rhythm-highlight">
-          <span class="card-number">03</span>
-          <span class="card-frequency">AU-DELÀ DES MESSES</span>
-          <h3>Une chorale pour vos événements</h3>
-          <p>Un répertoire polyvalent pour vos mariages, concerts, cérémonies et événements.</p>
-          <a href="/prestations/">Nos prestations <span aria-hidden="true">↗</span></a>
-        </article>
-      </div>
-    </section>
+
+    <div class="discover-strip" aria-label="Découvrir les prestations du Chœur Lumina">
+      <a href="/prestations/"><span class="item-icon" aria-hidden="true">♡</span><span><strong>Mariages</strong><small>Des instants inoubliables</small></span><span class="item-arrow" aria-hidden="true">↗</span></a>
+      <a href="/prestations/"><span class="item-icon" aria-hidden="true">♫</span><span><strong>Concerts</strong><small>Des émotions partagées</small></span><span class="item-arrow" aria-hidden="true">↗</span></a>
+      <a href="/prestations/"><span class="item-icon" aria-hidden="true">✧</span><span><strong>Cérémonies</strong><small>Une présence qui élève</small></span><span class="item-arrow" aria-hidden="true">↗</span></a>
+      <a href="/contact/"><span class="item-icon" aria-hidden="true">♧</span><span><strong>Événements privés</strong><small>Des harmonies sur mesure</small></span><span class="item-arrow" aria-hidden="true">↗</span></a>
+    </div>
   </main>
   <script>
-    const toggle=document.querySelector('.menu-toggle');
-    const nav=document.querySelector('.navigation');
-    if(toggle&&nav){
-      toggle.addEventListener('click',()=>{
-        const open=nav.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded',String(open));
-        toggle.querySelector('span').textContent=open?'×':'☰';
-      });
-      nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded','false');
-        toggle.querySelector('span').textContent='☰';
-      }));
-    }
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('#site-menu');
+    toggle.addEventListener('click', () => {
+      const opened = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(opened));
+      toggle.querySelector('span').textContent = opened ? '×' : '☰';
+    });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menu.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
   </script>
 </body>
 </html>

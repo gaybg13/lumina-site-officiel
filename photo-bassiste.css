@@ -1,0 +1,9 @@
+/* Finition transparente pour le portrait détouré de Prestations */
+.intro-visual{background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important}
+.intro-visual::before,.intro-visual::after{content:none!important;display:none!important}
+.intro-visual img{
+  mask-image:linear-gradient(to bottom,black 0%,black 68%,rgba(0,0,0,.9) 77%,rgba(0,0,0,.55) 89%,transparent 100%);
+  -webkit-mask-image:linear-gradient(to bottom,black 0%,black 68%,rgba(0,0,0,.9) 77%,rgba(0,0,0,.55) 89%,transparent 100%);
+  width:min(100%,420px);height:auto;object-fit:contain
+}
+@media(max-width:760px){.intro-visual img{width:min(90%,380px)}}

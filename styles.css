@@ -26,3 +26,6 @@ body{animation:pageArrival .45s ease both}@keyframes pageArrival{from{opacity:.3
 .section .overline{display:inline-block;color:#18314e!important;background:#edf1f4;padding:7px 10px;border-left:3px solid #18314e;letter-spacing:.09em;font-size:11px;line-height:1.35;font-weight:800}
 .services .overline,.contact .overline{background:#edf1f4;color:#18314e!important;border-left-color:#bc8c3a}
 .inner-hero .eyebrow{display:inline-block;color:#f3d59b!important;background:rgba(6,18,35,.5);border-left:3px solid #e6bd72;padding:9px 13px;letter-spacing:.11em;font-size:11px}
+
+/* Sobriété des rubriques : priorité aux intitulés, sans chiffres */
+.section .section-label{letter-spacing:.06em;line-height:1.45;font-size:12px;padding:11px 15px}

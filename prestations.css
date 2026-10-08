@@ -54,3 +54,11 @@ h1 em,h2 em{font-weight:500;color:#b88b42}
 @media(max-width:760px){.intro,.offers-heading,.approach{grid-template-columns:1fr;gap:24px}.intro{padding:38px 6%}.intro-lead h1{font-size:clamp(3.7rem,11vw,6rem)}.intro-side{padding-left:18px}.offers{padding:46px 6%}.offers-grid{grid-template-columns:1fr}.offers-heading{gap:13px}.offer-card{min-height:0;padding:25px}.offer-card h3{font-size:2.6rem}.approach{padding:47px 6%;gap:18px}.invite{flex-direction:column;align-items:stretch;gap:25px;padding:42px 6%}.invite .button{align-self:flex-start}.footer{padding:24px 6%;flex-direction:column;align-items:flex-start;gap:18px}}
 @media(max-width:390px){.intro-lead h1{font-size:clamp(3.3rem,11vw,4.3rem)}.intro-actions{align-items:flex-start;flex-direction:column}.button{font-size:11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Épure la numérotation, privilégie les intitulés */
+.section-kicker{padding:9px 15px;border-left:4px solid #142944;letter-spacing:.06em}
+.section-kicker-dark{border-left-color:#d0a451}
+.offer-top{justify-content:flex-end}
+.offer-card h3{margin-top:13px}
+.approach-steps>div{grid-template-columns:1fr;padding:18px 0;gap:5px}
+.approach-steps strong{font-size:15px}

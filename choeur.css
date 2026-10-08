@@ -91,3 +91,14 @@ h1,h2,h3,p{margin-top:0}
 }
 .invitation .section-kicker-dark .section-index{background:#142944;color:#fff}
 @media(max-width:760px){.section-kicker,.invitation p.section-kicker.section-kicker-dark{font-size:10px}}
+
+/* Repères sans numérotation superflue */
+.section-kicker{padding:9px 15px;border-left:4px solid #142944;letter-spacing:.055em}
+.invitation p.section-kicker.section-kicker-dark{padding:9px 15px;border-left:4px solid #d0a451}
+.aside-values>div{grid-template-columns:1fr;gap:4px}
+.aside-values strong{font-size:15px}
+.gathering-head{justify-content:flex-start}
+@media(max-width:480px){
+ .aside-values>div{display:block}
+ .aside-values strong{margin-bottom:5px}
+}

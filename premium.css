@@ -69,3 +69,6 @@ a:focus-visible,button:focus-visible{outline:3px solid #bc8e34;outline-offset:4p
 .homepage{min-height:calc(100svh - 76px)}
 }
 .site-menu a[aria-current="page"]{color:#aa7b27;text-decoration:underline;text-underline-offset:7px}
+
+/* Legible navigation and eyebrow text across the Lumina site */
+.kicker{color:#815b1e;font-weight:800;letter-spacing:.14em}

@@ -18,3 +18,11 @@ body{animation:pageArrival .45s ease both}@keyframes pageArrival{from{opacity:.3
 /* Inner pages now use a normal-flow ivory header, not the former fixed dark masthead. */
 .inner-hero{padding-top:clamp(62px,6.8vw,96px);padding-bottom:clamp(58px,6vw,84px);min-height:355px}
 @media(max-width:760px){.inner-hero{padding:58px 6% 54px;min-height:300px}.inner-hero h1{font-size:clamp(2.9rem,10vw,5rem)}}
+
+/* Strong, consistent section wayfinding across all interior pages */
+.section .section-label{display:inline-flex;align-items:center;gap:10px;width:auto;max-width:100%;background:#e8eef3;border:1px solid #cbd6e0;border-radius:4px;border-left:4px solid #18314e;padding:10px 15px;color:#19314f!important;font-size:11px;font-weight:800;letter-spacing:.085em;line-height:1.3;margin-bottom:45px}
+.section .section-label .line{display:none}
+.services .section-label,.contact .section-label{background:#eaf0f5;border-color:#bbcbd9;border-left-color:#c19348;color:#19314f!important}
+.section .overline{display:inline-block;color:#18314e!important;background:#edf1f4;padding:7px 10px;border-left:3px solid #18314e;letter-spacing:.09em;font-size:11px;line-height:1.35;font-weight:800}
+.services .overline,.contact .overline{background:#edf1f4;color:#18314e!important;border-left-color:#bc8c3a}
+.inner-hero .eyebrow{display:inline-block;color:#f3d59b!important;background:rgba(6,18,35,.5);border-left:3px solid #e6bd72;padding:9px 13px;letter-spacing:.11em;font-size:11px}

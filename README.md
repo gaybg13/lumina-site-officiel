@@ -1,25 +1,23 @@
-# 3D project
- Its a 3D cube animation project using only css3 and HTML5.In this project I have used different images and set them at different angles.The cube is moved by using HTML input tag of radio type.As we all know that a cube has 6 sides or we can say 6 portions.So thats why we have 6 input type radio buttons in our HTML.When user clicks any of them the cube is moved to that direction.And by default and cubes moves dynamically.
- 
- 
- ## Main HTML Tags used:
+# Chœur Lumina — Site vitrine officiel
 
-1:div:
-https://www.w3schools.com/tags/tag_div.ASP
-2:input:
-https://www.w3schools.com/tags/tag_input.asp
-3:label:
-https://www.w3schools.com/tags/tag_label.asp
- 
-## Main CSS3 properties used:
+Site vitrine indépendant de l'application mobile et de l'espace choristes.
 
-1:transform:
-https://www.w3schools.com/cssref/css3_pr_transform.asp
-2:transition:
-https://www.w3schools.com/cssref/css3_pr_transition.asp
-3:perspective:
-https://www.w3schools.com/cssref/css3_pr_perspective.asp
+## Structure
+- `index.html` : site public et sections
+- `styles.css` : identité graphique bleu nuit et or, responsive, animations
+- `app.js` : menu mobile, apparitions et formulaire de contact via messagerie
+- `CNAME` : domaine OVH `choeurlumina.fr`
 
-## Project Preview:
+## Publication gratuite
+1. Dans GitHub : **Settings > Pages**, choisir **Deploy from a branch**, branche `master`, dossier `/(root)`.
+2. Dans **Settings > Pages > Custom domain**, saisir `choeurlumina.fr`.
+3. Dans OVH : **Domaines > choeurlumina.fr > Zone DNS**, configurer les enregistrements A GitHub Pages recommandés par la documentation officielle et le `www` CNAME vers `gaybg13.github.io` si souhaité.
+4. Ne PAS supprimer les MX/TXT de Zimbra (messagerie).
+5. Activer **Enforce HTTPS** une fois le certificat disponible.
 
-[3D Cube Project](https://alitahir4024.github.io/3D-project/)
+## À personnaliser avant lancement
+- Photos et logo réels du chœur ; vrais partenaires et logos autorisés
+- Dates de concerts confirmées et mentions légales / politique de confidentialité
+- Formulaire actuel : ouvre l'application e-mail du visiteur, aucun envoi serveur ; remplacer par une solution compatible RGPD si réception directe requise
+
+Le dépôt conserve l'historique de l'ancien projet 3D, même si les fichiers de la dernière version ont été remplacés.

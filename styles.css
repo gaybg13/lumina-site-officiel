@@ -10,3 +10,7 @@ body{animation:pageArrival .45s ease both}@keyframes pageArrival{from{opacity:.3
 
 /* Accueil strictement autonome, sans sections verticales */
 .home-page{background:#0b172d}.home-page .hero{height:100svh;min-height:0;max-height:none;padding-top:110px;padding-bottom:64px}.home-page .hero-content{max-width:850px}.home-page .hero h1{font-size:clamp(3rem,8.3vw,8.6rem)}.home-page .hero-bottom{bottom:22px}.home-page .hero-description{max-width:490px}.home-page .hero-buttons a{cursor:pointer}@media(max-height:710px) and (min-width:700px){.home-page .hero h1{font-size:clamp(3rem,7vh,5.5rem);margin:14px 0}.home-page .hero-description{font-size:.92rem;line-height:1.55}.home-page .hero-buttons{margin-top:20px}.home-page .hero-bottom{bottom:13px}}@media(max-width:690px){.home-page .hero{height:100svh;min-height:0;padding-top:100px;padding-bottom:34px}.home-page .hero h1{font-size:clamp(2.7rem,11vw,5rem);margin:15px 0}.home-page .hero-description{font-size:.92rem;line-height:1.55}.home-page .hero-buttons{gap:9px;margin-top:18px}.home-page .hero-buttons .button{padding:12px 16px;min-height:45px}.home-page .hero-bottom{display:none}}@media(max-height:590px){.home-page .hero{height:auto;min-height:100svh}.home-page .hero-bottom{display:none}}
+
+/* Affichage stable des liens du menu et accueil explicite */
+@media (min-width:861px) and (max-width:1150px){.header{padding-inline:3vw}.header .navigation{gap:12px;font-size:.72rem}}
+.navigation a[href^="/?v="]{font-weight:700}

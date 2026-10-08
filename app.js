@@ -1,1 +1,14 @@
-document.getElementById("year").textContent=new Date().getFullYear();const toggle=document.querySelector(".menu-toggle");const nav=document.querySelector(".navigation");toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));toggle.textContent=open?"×":"☰"});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.textContent="☰"}));if("IntersectionObserver"in window){const o=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");o.unobserve(e.target)}}),{threshold:.09});document.querySelectorAll(".reveal").forEach(el=>o.observe(el))}else document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));document.getElementById("contact-form")?.addEventListener("submit",e=>{e.preventDefault();const d=new FormData(e.currentTarget);const body="Nom : "+d.get("nom")+"\nEmail : "+d.get("email")+"\nDemande : "+d.get("type")+"\n\n"+d.get("message");window.location.href="mailto:contact@choeurlumina.fr?subject="+encodeURIComponent("Site Lumina — "+d.get("type"))+"&body="+encodeURIComponent(body)});
+document.addEventListener("DOMContentLoaded",()=>{
+ const year=document.getElementById("year");if(year)year.textContent=String(new Date().getFullYear());
+ const toggle=document.querySelector(".site-header .menu-toggle");
+ const nav=document.querySelector(".site-header .site-menu");
+ if(toggle&&nav){
+   toggle.addEventListener("click",()=>{const open=nav.classList.toggle("is-open");toggle.setAttribute("aria-expanded",String(open));const symbol=toggle.querySelector("span");if(symbol)symbol.textContent=open?"×":"☰"});
+   nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("is-open");toggle.setAttribute("aria-expanded","false");const symbol=toggle.querySelector("span");if(symbol)symbol.textContent="☰"}));
+   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&nav.classList.contains("is-open")){nav.classList.remove("is-open");toggle.setAttribute("aria-expanded","false");const symbol=toggle.querySelector("span");if(symbol)symbol.textContent="☰";toggle.focus()}});
+ }
+ if("IntersectionObserver" in window){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.09});document.querySelectorAll(".reveal").forEach(el=>observer.observe(el))}
+ else document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));
+ const form=document.getElementById("contact-form");
+ if(form)form.addEventListener("submit",e=>{e.preventDefault();const data=new FormData(form);const body="Nom : "+data.get("nom")+"\nEmail : "+data.get("email")+"\nDemande : "+data.get("type")+"\n\n"+data.get("message");window.location.href="mailto:contact@choeurlumina.fr?subject="+encodeURIComponent("Site Lumina — "+data.get("type"))+"&body="+encodeURIComponent(body)});
+});

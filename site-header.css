@@ -1,0 +1,39 @@
+/* Identical editorial masthead on every Chœur Lumina page.
+   Mirrors the approved homepage banner; deliberately scoped so footer/page
+   content uses its own CSS. */
+.site-header{height:112px;padding:7px clamp(22px,4.5vw,85px);display:flex;justify-content:space-between;align-items:center;gap:28px;position:relative;z-index:50;background:#fff;border-bottom:1px solid #eadfc8;box-shadow:0 8px 35px rgba(38,40,48,.045);color:#152746;font-family:"DM Sans",sans-serif}
+.site-header .brand{display:flex;align-items:center;flex-shrink:0;gap:16px;min-width:0;color:#152746;font-size:initial;letter-spacing:normal}
+.site-header .brand-art{display:flex;align-items:center;justify-content:center;width:105px;height:103px;flex:none;overflow:hidden}
+.site-header .brand-art img{display:block;width:101px;height:101px;object-fit:contain;mix-blend-mode:multiply}
+.site-header .brand-name{display:flex;flex-direction:column;font-family:"Cormorant Garamond",Georgia,serif;line-height:.81;white-space:nowrap}
+.site-header .brand-name>span{font-size:28px;color:#bb892c;letter-spacing:.06em;font-weight:500}
+.site-header .brand-name strong{font-size:clamp(38px,3.4vw,57px);color:#10213b;font-weight:600;letter-spacing:.045em;margin-top:8px}
+.site-header .brand-name i{display:block;height:1px;background:linear-gradient(90deg,#c69a44,transparent);width:95%;margin-top:12px}
+.site-header .site-menu{display:flex;align-items:center;gap:clamp(9px,1.35vw,24px);font-size:13px;font-weight:600;white-space:nowrap}
+.site-header .site-menu>a:not(.contact-link){transition:color .25s}
+.site-header .site-menu>a:not(.contact-link):hover{color:#bb892c}
+.site-header .site-menu a[aria-current="page"]:not(.contact-link){color:#aa7b27;text-decoration:underline;text-underline-offset:7px}
+.site-header .contact-link{display:flex;gap:24px;align-items:center;justify-content:center;padding:17px 23px;border:1px solid #d8a745;border-radius:6px;background:linear-gradient(116deg,#f0c45f,#d49c31);color:#142644;box-shadow:0 8px 18px rgba(184,127,36,.15);transition:transform .25s,box-shadow .25s}
+.site-header .contact-link:hover{transform:translateY(-3px);box-shadow:0 13px 22px rgba(184,127,36,.21)}
+.site-header .menu-toggle{display:none}
+.site-header a:focus-visible,.site-header button:focus-visible{outline:3px solid #bb892c;outline-offset:4px}
+@media(max-width:1250px){
+ .site-header{padding:6px 3%;gap:12px}
+ .site-header .brand{gap:8px}
+ .site-header .brand-art,.site-header .brand-art img{width:85px;height:85px}
+ .site-header .brand-name strong{font-size:43px}
+ .site-header .site-menu{gap:16px}
+ .site-header .contact-link{padding:14px 15px;gap:9px}
+}
+@media(max-width:1080px){
+ .site-header{height:76px;padding:5px 18px}
+ .site-header .brand-art,.site-header .brand-art img{width:62px;height:62px}
+ .site-header .brand-name strong{font-size:34px}
+ .site-header .brand-name>span{font-size:18px}
+ .site-header .brand-name i{margin-top:9px}
+ .site-header .menu-toggle{display:grid;place-items:center;width:42px;height:42px;border:1px solid #e3d0a7;background:transparent;color:#112340;font-size:24px;border-radius:5px;cursor:pointer}
+ .site-header .site-menu{display:none;position:absolute;top:76px;left:0;right:0;background:#fffbf3;box-shadow:0 20px 30px rgba(9,22,40,.15);padding:15px;flex-direction:column;align-items:stretch;gap:0;font-size:14px;white-space:normal}
+ .site-header .site-menu.is-open{display:flex}
+ .site-header .site-menu>a{padding:14px}
+ .site-header .site-menu .contact-link{justify-content:center}
+}

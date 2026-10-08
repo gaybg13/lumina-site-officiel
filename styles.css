@@ -14,3 +14,7 @@ body{animation:pageArrival .45s ease both}@keyframes pageArrival{from{opacity:.3
 /* Affichage stable des liens du menu et accueil explicite */
 @media (min-width:861px) and (max-width:1150px){.header{padding-inline:3vw}.header .navigation{gap:12px;font-size:.72rem}}
 .navigation a[href^="/?v="]{font-weight:700}
+
+/* Inner pages now use a normal-flow ivory header, not the former fixed dark masthead. */
+.inner-hero{padding-top:clamp(62px,6.8vw,96px);padding-bottom:clamp(58px,6vw,84px);min-height:355px}
+@media(max-width:760px){.inner-hero{padding:58px 6% 54px;min-height:300px}.inner-hero h1{font-size:clamp(2.9rem,10vw,5rem)}}

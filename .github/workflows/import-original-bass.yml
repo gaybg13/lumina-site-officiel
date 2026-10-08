@@ -1,0 +1,51 @@
+name: Restore original bass portrait
+on:
+  push:
+    paths:
+      - '.github/workflows/import-original-bass.yml'
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Retrieve full size PNG from original media source
+        env:
+          SOURCE: 'https://media.canva.com/v2/image-resize/format:PNG/height:200/quality:100/uri:ifs%3A%2F%2FM%2F4d81ae52-9407-4c68-9c39-a4c9231da7ea/watermark:F/width:196?csig=AAAAAAAAAAAAAAAAAAAAAEakquClI9IeoQycjxGP8FviekoAvxYaV8aN51AQkrp6&exp=1791489447&osig=AAAAAAAAAAAAAAAAAAAAABwHPNF5wMu5kQwDZ_dHLiU3vg_mhBvH8y6kbTpxCzBf&signer=media-rpc&token=AAIAAU0AJDRkODFhZTUyLTk0MDctNGM2OC05YzM5LWE0YzkyMzFkYTdlYQAAAAABoR0XlFiE7B6NzFt7fo-9zp1iR7gEHtKtQWdThxyM94_BpinNFQ&x-canva-quality=thumbnail'
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os,urllib.request,struct
+          from pathlib import Path
+          src=os.environ["SOURCE"]
+          u=[src.replace("height:200","height:1264").replace("width:196","width:1244"),
+             src.replace("height:200","height:1264").replace("width:196","width:1244").replace("x-canva-quality=thumbnail","x-canva-quality=original"),
+             src.replace("/height:200","").replace("/width:196","")]
+          for ix,address in enumerate(u):
+              try:
+                  req=urllib.request.Request(address,headers={"User-Agent":"Mozilla/5.0"})
+                  with urllib.request.urlopen(req,timeout=20) as resp: body=resp.read()
+                  if not body.startswith(bytes.fromhex("89504e470d0a1a0a")):
+                      print("Candidate",ix,"not PNG")
+                      continue
+                  w,h=struct.unpack(">II",body[16:24])
+                  print("Candidate",ix,"size",w,h,"bytes",len(body))
+                  if w>=1000 and h>=1000:
+                      Path("assets/lumina-bassiste-original.png").write_bytes(body)
+                      print("Original-resolution image saved")
+                      break
+              except Exception as e:
+                  print("Candidate",ix,"unavailable",type(e).__name__)
+          else:
+              print("Original-resolution remote access unavailable. Existing image unchanged.")
+          PY
+      - name: Commit source image only if available
+        shell: bash
+        run: |
+          if [ ! -f assets/lumina-bassiste-original.png ]; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/lumina-bassiste-original.png
+          git commit -m "Add original-resolution bass portrait" || exit 0
+          git push

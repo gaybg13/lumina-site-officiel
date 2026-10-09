@@ -1,13 +1,21 @@
-/* Visuel sélectionné par le Chœur Lumina : PNG transparent original avec spirales dorées. */
-.intro{overflow:visible}
+/* Composition Prestations : mise en avant du portrait transparent aux spirales dorées. */
+.intro{
+  display:grid;
+  grid-template-columns:minmax(0,.93fr) minmax(0,1.07fr);
+  gap:clamp(14px,2vw,34px);
+  align-items:center;
+  overflow:visible;
+}
+.intro-content{min-width:0;position:relative;z-index:2}
 .intro-visual{
   position:relative;
   align-self:center;
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   width:100%;
-  max-width:680px;
+  max-width:none;
+  min-width:0;
   min-height:0!important;
   padding:0!important;
   background:transparent!important;
@@ -25,11 +33,13 @@
   display:block;
   position:relative;
   z-index:1;
-  width:100%;
-  max-width:580px;
+  flex:none;
+  width:110%;
+  max-width:750px;
   height:auto;
   max-height:none!important;
   object-fit:contain;
+  transform:translateX(-2%);
   opacity:1;
   border:0;
   border-radius:0;
@@ -37,12 +47,12 @@
   -webkit-mask-image:none!important;
   mask-image:none!important;
 }
-@media(max-width:1100px){
-  .intro-visual{min-height:0!important}
-  .intro-visual img{width:100%;max-height:none!important}
+@media(max-width:1080px) and (min-width:761px){
+ .intro{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+ .intro-visual img{width:109%;max-width:600px;transform:translateX(-2%)}
 }
 @media(max-width:760px){
-  .intro{overflow:visible}
-  .intro-visual{max-width:520px;margin-inline:auto;min-height:0!important}
-  .intro-visual img{width:100%;max-width:510px;max-height:none!important}
+ .intro{grid-template-columns:minmax(0,1fr);gap:8px;overflow:visible}
+ .intro-visual{max-width:590px;width:100%;min-height:0!important;margin:6px auto 0}
+ .intro-visual img{width:100%;max-width:590px;max-height:none!important;transform:none}
 }

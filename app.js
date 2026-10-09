@@ -10,5 +10,5 @@ document.addEventListener("DOMContentLoaded",()=>{
  if("IntersectionObserver" in window){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.09});document.querySelectorAll(".reveal").forEach(el=>observer.observe(el))}
  else document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));
  const form=document.getElementById("contact-form");
- if(form)form.addEventListener("submit",e=>{e.preventDefault();const data=new FormData(form);const body="Nom : "+data.get("nom")+"\nEmail : "+data.get("email")+"\nDemande : "+data.get("type")+"\n\n"+data.get("message");window.location.href="mailto:contact@choeurlumina.fr?subject="+encodeURIComponent("Site Lumina — "+data.get("type"))+"&body="+encodeURIComponent(body)});
+ if(form)form.addEventListener("submit",e=>{e.preventDefault();const data=new FormData(form);const body="Nom : "+data.get("nom")+"\nEmail : "+data.get("email")+"\nDemande : "+data.get("type")+"\n\n"+data.get("message");const mailto=document.querySelector(".contact-mail")?.getAttribute("href");const recipient=mailto&&/^mailto:[^?]+$/.test(mailto)?mailto:"mailto:contact@choeurlumina.fr";window.location.href=recipient+"?subject="+encodeURIComponent("Site Lumina — "+data.get("type"))+"&body="+encodeURIComponent(body)});
 });

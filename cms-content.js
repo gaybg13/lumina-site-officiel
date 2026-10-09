@@ -85,7 +85,7 @@
       splitTitle(".inner-hero h1", d.titre_1, d.titre_2, false);
       text(".inner-hero-content > p:last-child", d.introduction);
       text(".contact-grid > div:first-child > p:not(.overline)", d.conseils);
-      if (typeof d.email === "string" && /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(d.email)) {
+      if (typeof d.email === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) {
         const el = q(".contact-mail");
         if (el) {
           el.href = "mailto:" + d.email;
@@ -96,7 +96,7 @@
   };
   const dateLabel = (iso) => {
     const day = typeof iso === "string" ? iso.slice(0, 10) : "";
-    if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(day)) return null;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return null;
     const date = new Date(day + "T12:00:00");
     if (!Number.isFinite(date.getTime())) return null;
     return { day, label: new Intl.DateTimeFormat("fr-FR", {day:"numeric",month:"long",year:"numeric"}).format(date) };
@@ -186,7 +186,7 @@
     }));
   };
   document.addEventListener("DOMContentLoaded", () => {
-    const pathname = location.pathname.replace(/index\\.html$/, "").replace(/\\/$/, "") || "/";
+    const pathname = location.pathname.replace(/index\.html$/, "").replace(/\/$/, "") || "/";
     const slugByPath = {"/":"accueil","/choeur":"choeur","/prestations":"prestations","/evenements":"evenements","/partenaires":"partenaires","/contact":"contact"};
     const slug = slugByPath[pathname];
     if (!slug) return;

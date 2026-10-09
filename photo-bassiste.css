@@ -1,9 +1,48 @@
-/* Finition transparente pour le portrait détouré de Prestations */
-.intro-visual{background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important}
-.intro-visual::before,.intro-visual::after{content:none!important;display:none!important}
-.intro-visual img{
-  mask-image:linear-gradient(to bottom,black 0%,black 68%,rgba(0,0,0,.9) 77%,rgba(0,0,0,.55) 89%,transparent 100%);
-  -webkit-mask-image:linear-gradient(to bottom,black 0%,black 68%,rgba(0,0,0,.9) 77%,rgba(0,0,0,.55) 89%,transparent 100%);
-  width:min(100%,420px);height:auto;object-fit:contain
+/* Visuel sélectionné par le Chœur Lumina : PNG transparent original avec spirales dorées. */
+.intro{overflow:visible}
+.intro-visual{
+  position:relative;
+  align-self:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  max-width:680px;
+  min-height:0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+  isolation:auto;
 }
-@media(max-width:760px){.intro-visual img{width:min(90%,380px)}}
+.intro-visual::before,.intro-visual::after,.intro-visual .photo-orbit{
+  content:none!important;
+  display:none!important;
+}
+.intro-visual img{
+  display:block;
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:580px;
+  height:auto;
+  max-height:none!important;
+  object-fit:contain;
+  opacity:1;
+  border:0;
+  border-radius:0;
+  filter:none!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+}
+@media(max-width:1100px){
+  .intro-visual{min-height:0!important}
+  .intro-visual img{width:100%;max-height:none!important}
+}
+@media(max-width:760px){
+  .intro{overflow:visible}
+  .intro-visual{max-width:520px;margin-inline:auto;min-height:0!important}
+  .intro-visual img{width:100%;max-width:510px;max-height:none!important}
+}

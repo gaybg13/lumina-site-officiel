@@ -1,0 +1,318 @@
+media:
+  input: assets
+  output: /assets
+  rename: safe
+content:
+  - name: accueil
+    label: "01 · Accueil"
+    type: file
+    path: contenu/accueil.json
+    format: json
+    operations:
+      delete: false
+      rename: false
+    fields:
+      - name: titre_1
+        label: "Titre — ligne 1"
+        type: string
+        required: true
+      - name: titre_2
+        label: "Titre — ligne 2"
+        type: string
+        required: true
+      - name: introduction
+        label: "Présentation courte"
+        type: text
+        required: true
+      - name: photo
+        label: "Photo du groupe (URL ou chemin /assets/...)"
+        type: string
+        required: true
+      - name: photo_alt
+        label: "Description de la photo"
+        type: string
+        required: true
+      - name: mariages
+        label: "Accueil · mariages"
+        type: string
+        required: true
+      - name: concerts
+        label: "Accueil · concerts"
+        type: string
+        required: true
+      - name: ceremonies
+        label: "Accueil · cérémonies"
+        type: string
+        required: true
+      - name: prives
+        label: "Accueil · événements privés"
+        type: string
+        required: true
+  - name: choeur
+    label: "02 · Le chœur"
+    type: file
+    path: contenu/choeur.json
+    format: json
+    operations:
+      delete: false
+      rename: false
+    fields:
+      - name: titre_1
+        label: "Titre — ligne 1"
+        type: string
+        required: true
+      - name: titre_2
+        label: "Titre — ligne 2"
+        type: string
+        required: true
+      - name: introduction
+        label: "Notre présentation"
+        type: text
+        required: true
+      - name: histoire
+        label: "Notre démarche collective"
+        type: text
+        required: true
+      - name: valeur_1
+        label: "Valeur · l'écoute"
+        type: text
+        required: true
+      - name: valeur_2
+        label: "Valeur · le travail"
+        type: text
+        required: true
+      - name: valeur_3
+        label: "Valeur · l'ouverture"
+        type: text
+        required: true
+      - name: repertoire_titre_1
+        label: "Répertoire — ligne 1"
+        type: string
+        required: true
+      - name: repertoire_titre_2
+        label: "Répertoire — ligne 2"
+        type: string
+        required: true
+      - name: repertoire_1
+        label: "Répertoire · présentation"
+        type: text
+        required: true
+      - name: repertoire_2
+        label: "Répertoire · notre méthode"
+        type: text
+        required: true
+      - name: repetitions_rythme
+        label: "Répétitions · fréquence"
+        type: string
+        required: true
+      - name: repetitions_lieu
+        label: "Répétitions · lieu"
+        type: string
+        required: true
+      - name: repetitions_description
+        label: "Répétitions · description"
+        type: text
+        required: true
+      - name: animations_rythme
+        label: "Animations · rythme"
+        type: string
+        required: true
+      - name: animations_lieu
+        label: "Animations · titre"
+        type: string
+        required: true
+      - name: animations_description
+        label: "Animations · description"
+        type: text
+        required: true
+  - name: prestations
+    label: "03 · Prestations"
+    type: file
+    path: contenu/prestations.json
+    format: json
+    operations:
+      delete: false
+      rename: false
+    fields:
+      - name: titre_1
+        label: "Titre — ligne 1"
+        type: string
+        required: true
+      - name: titre_2
+        label: "Titre — ligne 2"
+        type: string
+        required: true
+      - name: accroche
+        label: "Accroche principale"
+        type: text
+        required: true
+      - name: introduction_1
+        label: "Introduction · premier paragraphe"
+        type: text
+        required: true
+      - name: introduction_2
+        label: "Introduction · second paragraphe"
+        type: text
+        required: true
+      - name: photo
+        label: "Image du bassiste (choisir dans Médias)"
+        type: image
+        required: true
+      - name: mariages
+        label: "Description des mariages"
+        type: text
+        required: true
+      - name: concerts
+        label: "Description des concerts"
+        type: text
+        required: true
+      - name: ceremonies
+        label: "Description des cérémonies"
+        type: text
+        required: true
+      - name: prives
+        label: "Description des événements privés"
+        type: text
+        required: true
+  - name: evenements
+    label: "04 · Événements — présentation"
+    type: file
+    path: contenu/evenements.json
+    format: json
+    operations:
+      delete: false
+      rename: false
+    fields:
+      - name: titre_1
+        label: "Titre — ligne 1"
+        type: string
+        required: true
+      - name: titre_2
+        label: "Titre — ligne 2"
+        type: string
+        required: true
+      - name: introduction
+        label: "Message principal"
+        type: text
+        required: true
+      - name: explication
+        label: "Présentation de l'agenda"
+        type: text
+        required: true
+      - name: agenda_vide
+        label: "Message si aucune date n'est programmée"
+        type: text
+        required: true
+  - name: partenaires
+    label: "06 · Partenaires — présentation"
+    type: file
+    path: contenu/partenaires.json
+    format: json
+    operations:
+      delete: false
+      rename: false
+    fields:
+      - name: titre_1
+        label: "Titre — ligne 1"
+        type: string
+        required: true
+      - name: titre_2
+        label: "Titre — ligne 2"
+        type: string
+        required: true
+      - name: introduction
+        label: "Texte d'introduction"
+        type: text
+        required: true
+      - name: collaboration
+        label: "Comment coopérer avec Lumina ?"
+        type: text
+        required: true
+  - name: contact
+    label: "08 · Contact"
+    type: file
+    path: contenu/contact.json
+    format: json
+    operations:
+      delete: false
+      rename: false
+    fields:
+      - name: titre_1
+        label: "Titre — ligne 1"
+        type: string
+        required: true
+      - name: titre_2
+        label: "Titre — ligne 2"
+        type: string
+        required: true
+      - name: introduction
+        label: "Présentation du contact"
+        type: text
+        required: true
+      - name: conseils
+        label: "Conseils pour préparer le message"
+        type: text
+        required: true
+      - name: email
+        label: "Adresse de contact"
+        type: string
+        required: true
+  - name: agenda
+    label: "05 · Agenda — dates publiques"
+    type: file
+    path: contenu/agenda.json
+    format: json
+    list: true
+    operations:
+      delete: false
+      rename: false
+    fields:
+      - name: titre
+        label: "Nom de l'événement"
+        type: string
+      - name: date
+        label: "Date de l'événement"
+        type: date
+      - name: heure
+        label: "Heure (ex. 18:30)"
+        type: string
+      - name: lieu
+        label: "Lieu (ville et salle)"
+        type: string
+      - name: description
+        label: "Description"
+        type: text
+      - name: image
+        label: "Affiche ou photographie (facultatif)"
+        type: image
+      - name: lien
+        label: "Lien d'informations / réservation (facultatif)"
+        type: string
+      - name: publie
+        label: "Afficher sur le site ?"
+        type: boolean
+  - name: organisations
+    label: "07 · Partenaires — fiches"
+    type: file
+    path: contenu/organisations.json
+    format: json
+    list: true
+    operations:
+      delete: false
+      rename: false
+    fields:
+      - name: nom
+        label: "Nom du partenaire"
+        type: string
+      - name: description
+        label: "Description du partenariat"
+        type: text
+      - name: logo
+        label: "Logo (facultatif)"
+        type: image
+      - name: site
+        label: "Site internet (facultatif)"
+        type: string
+      - name: publie
+        label: "Afficher sur le site ?"
+        type: boolean

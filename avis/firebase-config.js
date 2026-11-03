@@ -10,4 +10,4 @@ window.LUMINA_REVIEWS_FIREBASE_CONFIG = {
 
 // Clé de site publique reCAPTCHA Enterprise à renseigner après son enregistrement dans App Check.
 // Laisser vide tant que la configuration n'est pas terminée (pour ne pas interrompre les avis).
-window.LUMINA_REVIEWS_APP_CHECK_SITE_KEY = "";
+window.LUMINA_REVIEWS_APP_CHECK_SITE_KEY = "6LfKgg4uAAAAAL3dUW2dmNkH783YdVYyH1CYNKcp";

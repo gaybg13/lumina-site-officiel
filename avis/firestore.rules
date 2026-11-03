@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /publicReviews/{reviewId} {
+      allow read: if true;
+      // Une publication au plus par identité anonyme, sans modification publique.
+      allow create: if request.auth != null
+        && request.auth.token.firebase.sign_in_provider == 'anonymous'
+        && request.auth.uid == reviewId
+        && request.resource.data.keys().hasOnly(['name', 'event', 'rating', 'comment', 'createdAt'])
+        && request.resource.data.keys().hasAll(['name', 'event', 'rating', 'comment', 'createdAt'])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() >= 2
+        && request.resource.data.name.size() <= 100
+        && request.resource.data.event in ['Mariage','Messe ou cérémonie religieuse','Concert','Hommage ou requiem','Événement privé ou associatif','Autre prestation']
+        && request.resource.data.rating is int
+        && request.resource.data.rating >= 1
+        && request.resource.data.rating <= 5
+        && request.resource.data.comment is string
+        && request.resource.data.comment.size() >= 10
+        && request.resource.data.comment.size() <= 2000
+        && request.resource.data.createdAt == request.time;
+      allow update, delete: if false;
+    }
+    match /{document=**} { allow read, write: if false; }
+  }
+}

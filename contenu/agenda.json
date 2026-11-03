@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "titre": "Messe de requiem",
+    "date": "2026-11-14",
+    "heure": "20h00",
+    "lieu": "124 Bis, Tourcoing",
+    "description": "Messe de requiem accompagnée par le Chœur Lumina.",
+    "image": "",
+    "lien": "",
+    "publie": true
+  },
+  {
+    "titre": "Concert de Noël du Chœur Lumina",
+    "date": "2026-12-18",
+    "heure": "19h00",
+    "lieu": "Église Saint-Vincent-de-Paul, Lille",
+    "description": "Concert de Noël : un rendez-vous musical pour partager les grands classiques de Noël.",
+    "image": "",
+    "lien": "",
+    "publie": true
+  }
+]

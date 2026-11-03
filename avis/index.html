@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffdfa">
+  <meta name="description" content="Vous avez assisté à une prestation du Chœur Lumina à Lille ? Partagez librement votre avis, votre note et votre expérience lors d'un mariage, concert ou cérémonie.">
+  <title>Avis et témoignages | Chœur Lumina à Lille</title>
+  <link rel="canonical" href="https://choeurlumina.fr/avis/">
+  <link rel="stylesheet" href="/prestations.css?v=20261103-01">
+  <link rel="stylesheet" href="/site-header.css?v=20261008-09">
+  <link rel="stylesheet" href="/avis/avis.css?v=20261103-01">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Chœur Lumina, accueil">
+    <span class="brand-art"><img src="https://raw.githubusercontent.com/gaybg13/Choeur-Lumina-APP-WEB/main/public/icons/icon-512.png" alt="Logo du Chœur Lumina" width="104" height="104"></span>
+    <span class="brand-name"><span>Chœur</span><strong>LUMINA</strong><i aria-hidden="true"></i></span>
+  </a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Afficher le menu"><span aria-hidden="true">☰</span></button>
+  <nav class="site-menu" id="site-menu" aria-label="Navigation principale">
+    <a href="/">Accueil</a><a href="/choeur/">Le chœur</a><a href="/prestations/">Prestations</a><a href="/evenements/">Événements</a><a href="/avis/" aria-current="page">Avis</a><a href="/contact/" class="contact-link">Nous contacter ↗</a>
+  </nav>
+</header>
+<main>
+  <section class="avis-hero">
+    <p class="section-kicker">VOS RETOURS NOUS FONT GRANDIR</p>
+    <h1>Votre expérience.<br><em>Notre plus belle recommandation.</em></h1>
+    <p>Vous avez fait appel au Chœur Lumina pour un mariage, une cérémonie, un concert ou un événement ? Racontez-nous votre expérience en toute liberté. Vos retours nous aident à progresser et permettent à d'autres personnes de découvrir notre univers musical à Lille et dans les Hauts-de-France.</p>
+    <a class="avis-jump" href="#donner-avis">Partager votre avis ↓</a>
+  </section>
+  <section class="avis-content" aria-labelledby="avis-title">
+    <div class="avis-intro">
+      <p class="section-kicker">ILS NOUS FONT CONFIANCE</p>
+      <h2 id="avis-title">Les retours de <em>notre public.</em></h2>
+      <p>Les témoignages publiés ici seront des retours authentiques, partagés avec l'accord de leurs auteurs. Nous accueillerons aussi bien les suggestions que les compliments.</p>
+      <div class="avis-empty">Les premiers témoignages seront publiés ici après autorisation de leurs auteurs. Aucun avis ni aucune note moyenne ne sont affichés avant réception de contributions vérifiées.</div>
+    </div>
+    <div class="avis-form-panel" id="donner-avis">
+      <p class="section-kicker">PARTAGEZ VOTRE EXPÉRIENCE</p>
+      <h2>Donnez-nous <em>votre avis.</em></h2>
+      <p class="avis-lead">Votre avis peut aider un futur couple ou un organisateur à choisir un accompagnement musical.</p>
+      <form id="review-form">
+        <label for="review-name">Votre nom ou prénom <span aria-hidden="true">*</span></label>
+        <input id="review-name" name="name" maxlength="100" autocomplete="name" placeholder="Ex. : Camille" required>
+        <label for="review-event">Pour quelle occasion ? <span aria-hidden="true">*</span></label>
+        <select id="review-event" name="event" required>
+          <option value="">Choisir une occasion</option>
+          <option>Mariage</option><option>Messe ou cérémonie religieuse</option><option>Concert</option><option>Hommage ou requiem</option><option>Événement privé ou associatif</option><option>Autre prestation</option>
+        </select>
+        <fieldset class="rating-fieldset">
+          <legend>Votre note <span aria-hidden="true">*</span></legend>
+          <div class="rating-options" role="radiogroup" aria-label="Note sur 5">
+            <label><input type="radio" name="rating" value="1" required><span>★</span><small>1/5</small></label>
+            <label><input type="radio" name="rating" value="2"><span>★</span><small>2/5</small></label>
+            <label><input type="radio" name="rating" value="3"><span>★</span><small>3/5</small></label>
+            <label><input type="radio" name="rating" value="4"><span>★</span><small>4/5</small></label>
+            <label><input type="radio" name="rating" value="5"><span>★</span><small>5/5</small></label>
+          </div>
+          <p id="rating-label" class="rating-help" aria-live="polite">Choisissez une note de 1 à 5 étoiles.</p>
+        </fieldset>
+        <label for="review-comment">Votre témoignage <span aria-hidden="true">*</span></label>
+        <textarea id="review-comment" name="comment" maxlength="2000" rows="6" placeholder="Qu'avez-vous pensé de notre préparation, de nos échanges et de la prestation ?" required></textarea>
+        <label class="review-consent"><input type="checkbox" name="consent" id="review-consent" required><span>J'autorise le Chœur Lumina à me recontacter au sujet de ce témoignage et, après vérification, à publier mon texte, ma note et le nom indiqué sur cette page. <strong>Je peux retirer cette autorisation en écrivant à contact@choeurlumina.fr.</strong></span></label>
+        <button type="submit" class="avis-submit">Préparer l'envoi de mon avis ↗</button>
+        <p class="avis-note">Le bouton ouvre votre application de messagerie avec l'avis prérempli. Vous devrez envoyer l'e-mail pour nous le transmettre. Aucun avis n'est publié automatiquement.</p>
+        <p id="review-status" class="avis-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="footer"><span>© Chœur Lumina · Lille & Hauts-de-France</span><div><a href="/prestations/">Prestations</a><a href="/contact/">Contact</a></div></footer>
+<script src="/avis/avis.js?v=20261103-01" defer></script>
+</body>
+</html>

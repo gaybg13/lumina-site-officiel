@@ -7,3 +7,7 @@ window.LUMINA_REVIEWS_FIREBASE_CONFIG = {
   messagingSenderId: "171506486399",
   appId: "1:171506486399:web:1107b2ca9a2aeae16d434a"
 };
+
+// Clé de site publique reCAPTCHA Enterprise à renseigner après son enregistrement dans App Check.
+// Laisser vide tant que la configuration n'est pas terminée (pour ne pas interrompre les avis).
+window.LUMINA_REVIEWS_APP_CHECK_SITE_KEY = "";

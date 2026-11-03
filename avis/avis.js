@@ -1,4 +1,5 @@
 import {initializeApp} from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
+import {initializeAppCheck,ReCaptchaEnterpriseProvider} from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app-check.js";
 import {getAuth,signInAnonymously,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js";
 import {getFirestore,collection,doc,setDoc,getDoc,onSnapshot,query,orderBy,serverTimestamp} from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
 
@@ -39,6 +40,15 @@ if(!config||!config.apiKey||!config.projectId||config.apiKey.startsWith("A_COMPL
 }else{
   try{
     const app=initializeApp(config,"lumina-public-reviews");
+    // App Check sera activé lorsque la clé publique reCAPTCHA Enterprise sera fournie.
+    // Ne pas imposer App Check dans la console avant sa configuration et son test ici.
+    const appCheckSiteKey=window.LUMINA_REVIEWS_APP_CHECK_SITE_KEY;
+    if(typeof appCheckSiteKey==="string" && appCheckSiteKey.trim()){
+      initializeAppCheck(app,{
+        provider:new ReCaptchaEnterpriseProvider(appCheckSiteKey.trim()),
+        isTokenAutoRefreshEnabled:true
+      });
+    }
     const auth=getAuth(app);
     const db=getFirestore(app);
     const reviews=collection(db,"publicReviews");

@@ -138,3 +138,16 @@ h1 em,h2 em{font-weight:500;color:#b88b42}
  .intro-visual img{max-height:none;width:min(78%,330px)}
  .intro-content{padding-bottom:12px}
 }
+
+/* Possibilités de prestations mariage : continuité de la charte ivoire, marine et or */
+.wedding-options{padding:clamp(48px,5vw,76px) clamp(24px,6vw,100px);background:#fffdfa}
+.wedding-options-heading{max-width:900px;margin-bottom:26px}
+.wedding-options-heading h2{font-size:clamp(2.6rem,4.5vw,5rem);line-height:1.02;letter-spacing:-.045em;margin:0 0 18px;color:#172943}
+.wedding-options-heading>p:not(.section-kicker){font-size:14px;line-height:1.85;color:#586679;max-width:780px}
+.wedding-options-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:26px 0}
+.wedding-options-grid article{padding:clamp(23px,2.5vw,34px);background:#f9f5ed;border:1px solid #e7dcc9;border-top:3px solid #b88b42}
+.wedding-options-grid h3{font-size:clamp(1.85rem,2.5vw,2.7rem);line-height:1.08;color:#172943;margin:0 0 12px}
+.wedding-options-grid p,.wedding-options-note{font-size:13px;line-height:1.8;color:#596779;margin:0}
+.wedding-options-grid article:last-child{grid-column:1/-1}
+.wedding-options-note{margin:0 0 23px;max-width:800px}
+@media(max-width:760px){.wedding-options{padding:47px 6%}.wedding-options-grid{grid-template-columns:1fr}.wedding-options-grid article:last-child{grid-column:auto}}

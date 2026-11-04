@@ -146,7 +146,7 @@
     });
     list.replaceChildren(...cards);
     text("#agenda .events-heading > p", "Voici les prochains rendez-vous confirmés du Chœur Lumina. Les informations sont mises à jour à mesure de leur préparation.");
-    text("#agenda-title", "À retrouver prochainement.");
+    text("#agenda-title", "Nos prochains rendez-vous.");
   };
   const renderPartners = (entries) => {
     const holder = q(".partner-placeholder");
